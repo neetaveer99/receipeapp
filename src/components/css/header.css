@@ -1,0 +1,97 @@
+/* Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav {
+    display: flex;
+  }
+  
+  .nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav li {
+    margin-right: 1rem;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  
+  .bar {
+    height: 5px;
+    width: 30px;
+    background-color: white;
+    margin: 5px 0;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .bar-open {
+    background-color: #ff4500;
+  }
+  
+  /* Updated styles for smaller screens */
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+  
+    .nav-toggle {
+      display: block;
+    }
+    
+    .nav-open {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      border: 1px solid #555;
+      padding: 1rem;
+      width: 100%;
+      box-shadow: 0px 5px 5px -5px #333;
+    }
+  
+    .nav-open ul {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .nav-open li {
+      margin-bottom: 1rem;
+    }
+  
+    .nav-open a {
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+  
